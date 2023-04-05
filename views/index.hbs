@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {{!-- css link bootstrtap --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    {{!-- aos animation cdn link --}}
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    {{!-- font awsome cdn link --}}
+
+    <script src="https://kit.fontawesome.com/57b3d458f6.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 90vh;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 0.5s ease;
+    }
+
+    .overlay h1 {
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .overlay h3 {
+        color: white;
+        font-size: 20px;
+        position: relative;
+        top: 20%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .image-container:hover .overlay {
+        height: 100%;
+    }
+
+    .heading-color {
+
+
+        font-family: 'Roboto Mono', monospace;
+
+
+        color: rgb(219, 248, 114) !important;
+    }
+
+    .box h3 {
+
+        font-family: 'Roboto Mono', monospace;
+        color: rgb(250, 253, 252) !important;
+        font-size: 20px;
+
+
+    }
+
+    .icons {
+
+        font-size: 60px;
+        color: rgb(227, 115, 50);
+        transition: 0.6s all ease;
+
+    }
+
+    .icons:hover {
+        transform: scale(1.2);
+        color: black;
+    }
+
+    .card {
+        box-shadow: 10px 10px 25px rgb(189, 171, 113);
+        transition: 0.9s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        background-color: rgb(160, 221, 194);
+    }
+
+
+
+
+    .image-container {
+        position: relative;
+    }
+
+    .image-container .image2 {
+        height: 70vh;
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .image-overlay h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .image-overlay p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #333;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+    }
+
+    .button:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .button1 {
+        border: 2px solid rgb(255, 171, 0);
+        color: white;
+        outline: none;
+        text-decoration: none;
+        padding: 10px 10px;
+        transition: 0.6s ease;
+        font-size: 1.2rem;
+    }
+
+    .button1:hover {
+        color: black;
+        background: rgb(255, 171, 0);
+    }
+
+    .primium{
+        background-color: rgb(255,163,25) !important;
+        color: #fff;
+    }
+    .primium1{
+        background-color: rgb(16,43,128) !important;
+        color: #fff;
+    }
+    .primium2{
+       
+             background-color: rgb(19,197,146) !important;
+             color: #fff;
+    }
+
+      .icons1 {
+
+        font-size: 60px;
+        color: rgb(33, 31, 29);
+        transition: 0.6s all ease;
+
+    }
+
+    .icons1:hover {
+        transform: scale(1.2);
+        color: rgb(240, 7, 7);
+    }
+    .btn{
+        background-color: red !important;
+        transition: 0.6s ease;
+    }
+    .btn:hover{
+        background-color: rgba(251, 39, 39, 0.997) !important;
+        color: #111 !important;
+        
+    }
+</style>
+
+<body>
+
+    {{> Navbar}}
+
+
+    <div class="image-container">
+        <img class="homeimg"
+            src="https://media.istockphoto.com/id/1303501748/photo/a-business-never-stops-operating.jpg?b=1&s=170667a&w=0&k=20&c=p2fQhZLp9fRuxgwJvGyNkH3gaznqLv5zpGVb14NhW34="
+            height="90vh" alt="Image description">
+        <div class="overlay box">
+            <h1 class="heading-color">GET BUSINESS WEBSITE STARTING FROM ₹3800</h1>
+
+
+
+
+            <h3>3 Static Page Website</h3>
+            <h3>SEO Ready Websit</h3>
+            <h3>Annual Renewal Rs.2000 </h3>
+            <h3>Call – +91 8670427687</h3>
+
+        </div>
+    </div>
+
+
+    {{!-- card start --}}
+
+
+    <div class="container mt-5">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <div class="card" style="width: 21rem;">
+                    {{!-- <img
+                        src="https://media.istockphoto.com/id/1346575545/photo/3d-render-of-social-media-business-concept.jpg?b=1&s=170667a&w=0&k=20&c=KI72UWh7E0H6j2Zz9_S2-_HoPGqbLorX24zHP4O01CE="
+                        class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons"><i class="fa-brands fa-rocketchat"></i></a>
+                    <div class="card-body">
+                        <h2 class="text-center">Live Chat</h2>
+                        <p class="card-text para mt-3">Incredible customer support has been one of the important aspects
+                            of any
+                            service. In this context, we offer the opportunity for our clients to remain indulged in
+                            live chat with the experts through Live Chat support. This support can help clients in
+                            establishing better customer relationships, boosting their chances of being loyal buyers. .
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 21rem;">
+                    {{!-- <img
+                        src="https://media.istockphoto.com/id/1346575545/photo/3d-render-of-social-media-business-concept.jpg?b=1&s=170667a&w=0&k=20&c=KI72UWh7E0H6j2Zz9_S2-_HoPGqbLorX24zHP4O01CE="
+                        class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons"><i class="fa-solid fa-laptop"></i></a>
+
+                    <div class="card-body">
+                        <h2 class="text-center">Responsive Design</h2>
+
+                        <p class="card-text mt-3">Incredible customer support has been one of the important aspects of
+                            any
+                            service. In this context, we offer the opportunity for our clients to remain indulged in
+                            live chat with the experts through Live Chat support. This support can help clients in
+                            establishing better customer relationships, boosting their chances of being loyal buyers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 21rem;">
+                    {{!-- <img
+                        src="https://media.istockphoto.com/id/1346575545/photo/3d-render-of-social-media-business-concept.jpg?b=1&s=170667a&w=0&k=20&c=KI72UWh7E0H6j2Zz9_S2-_HoPGqbLorX24zHP4O01CE="
+                        class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons"><i class="fa-solid fa-bolt"></i></a>
+
+                    <div class="card-body">
+                        <h2 class="text-center">Lighting Speed</h2>
+
+                        <p class="card-text mt-3">Incredible customer support has been one of the important aspects of
+                            any
+                            service. In this context, we offer the opportunity for our clients to remain indulged in
+                            live chat with the experts through Live Chat support. This support can help clients in
+                            establishing better customer relationships, boosting their chances of being loyal buyers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container mt-5">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <div class="card" style="width: 21rem;">
+                    {{!-- <img
+                        src="https://media.istockphoto.com/id/1346575545/photo/3d-render-of-social-media-business-concept.jpg?b=1&s=170667a&w=0&k=20&c=KI72UWh7E0H6j2Zz9_S2-_HoPGqbLorX24zHP4O01CE="
+                        class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons"><i class="fa-solid fa-indian-rupee-sign"></i></i></a>
+                    <div class="card-body">
+                        <h2 class="text-center">Secure Payment</h2>
+                        <p class="card-text para mt-3">Incredible customer support has been one of the important aspects
+                            of any
+                            service. In this context, we offer the opportunity for our clients to remain indulged in
+                            live chat with the experts through Live Chat support. This support can help clients in
+                            establishing better customer relationships, boosting their chances of being loyal buyers. .
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 21rem;">
+                    {{!-- <img
+                        src="https://media.istockphoto.com/id/1346575545/photo/3d-render-of-social-media-business-concept.jpg?b=1&s=170667a&w=0&k=20&c=KI72UWh7E0H6j2Zz9_S2-_HoPGqbLorX24zHP4O01CE="
+                        class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons"><i class="fa-solid fa-photo-film"></i></a>
+
+                    <div class="card-body">
+                        <h2 class="text-center">Social Media</h2>
+
+                        <p class="card-text mt-3">Incredible customer support has been one of the important aspects of
+                            any
+                            service. In this context, we offer the opportunity for our clients to remain indulged in
+                            live chat with the experts through Live Chat support. This support can help clients in
+                            establishing better customer relationships, boosting their chances of being loyal buyers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 21rem;">
+                    {{!-- <img
+                        src="https://media.istockphoto.com/id/1346575545/photo/3d-render-of-social-media-business-concept.jpg?b=1&s=170667a&w=0&k=20&c=KI72UWh7E0H6j2Zz9_S2-_HoPGqbLorX24zHP4O01CE="
+                        class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons"><i class="fa-solid fa-headset"></i></a>
+
+                    <div class="card-body">
+                        <h2 class="text-center">24/7 Support</h2>
+
+                        <p class="card-text mt-3">Incredible customer support has been one of the important aspects of
+                            any
+                            service. In this context, we offer the opportunity for our clients to remain indulged in
+                            live chat with the experts through Live Chat support. This support can help clients in
+                            establishing better customer relationships, boosting their chances of being loyal buyers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{!-- middle image starting --}}
+
+    <div class="image-container mt-5">
+        <img class="image2"
+            src="https://media.istockphoto.com/id/1294603953/vector/abstract-black-stripes-diagonal-background.jpg?s=612x612&w=0&k=20&c=nQZHTk-o97cNVqWnUe8BJg0A5jQG0tqylquzbt9YtcQ="
+            alt="Image description">
+        <div class="image-overlay">
+            <h2 class="heading-color">REAL Client Testimonials</h2>
+            <p class="text-secondary">Don’t take our word for it – here’s what our clients say:</p>
+            <a href="#" class="button1 ">Learn more</a>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <div class="card primium" style="width: 21rem;">
+                    {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons1"><i class="fa-solid fa-globe"></i></a>
+
+                    <div class="card-body">
+                        <h5 class="card-title bg-white text-center text-danger">Silver Plan<br> Note: GST @ 18% Applicable on All Purchase</h5>
+                        <h1 class="mt-3">₹5800</h1>
+                        <h6 class=" mt-3"><i class="fa-solid fa-arrow-right text-danger" ></i>5 Page (Dynamic Website)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>3 Business Email id</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Unlimited Images & Videos</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Unlimited (Bandwidth/ Space)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>SEO Ready Website</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>100% Responsive Website</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Live Chat Integration</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>For SSL (Rs. 1000 extra )</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>24/7 Support (Phone/Email/Chat)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Annual Renewal Rs. 3500</h6><hr>
+                        
+                        <a href="#" class="btn btn-danger">BOOK NOW FOR FREE</a>
+                    </div>
+                </div>
+            </div>
+
+           
+
+           <div class="col-md-4">
+                <div class="card primium1" style="width: 21rem;">
+                    {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons1"><i class="fa-solid fa-indian-rupee-sign"></i></i></a>
+
+                    <div class="card-body">
+                        <h5 class="card-title bg-white text-center text-danger">Gold Plan<br>Note: GST @ 18% Applicable on All Purchase</h5>
+                        <h1 class="mt-3">₹7999</h1>
+                        <h6 class=" mt-3"><i class="fa-solid fa-arrow-right text-danger" ></i>5 Page (Dynamic Website)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>3 Business Email id</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Unlimited Images & Videos</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Unlimited (Bandwidth/ Space)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>SEO Ready Website</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>100% Responsive Website</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Live Chat Integration</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>For SSL (Rs. 1000 extra )</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>24/7 Support (Phone/Email/Chat)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Annual Renewal Rs. 3500</h6><hr>
+                        
+                        <a href="#" class="btn btn-danger">BOOK NOW FOR FREE</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-4">
+                <div class="card primium2" style="width: 21rem;">
+                    {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+                    <a class="text-center icons1"><i class="fa-solid fa-globe"></i></a>
+
+                    <div class="card-body">
+                        <h5 class="card-title bg-white text-center text-danger">Platinum Plan<br> Note: GST @ 18% Applicable on All Purchase</h5>
+                        <h1 class="mt-3">₹9999</h1>
+                        <h6 class=" mt-3"><i class="fa-solid fa-arrow-right text-danger" ></i>5 Page (Dynamic Website)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>3 Business Email id</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Unlimited Images & Videos</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Unlimited (Bandwidth/ Space)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>SEO Ready Website</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>100% Responsive Website</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Live Chat Integration</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>For SSL (Rs. 1000 extra )</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>24/7 Support (Phone/Email/Chat)</h6><hr>
+                        <h6><i class="fa-solid fa-arrow-right text-danger" ></i>Annual Renewal Rs. 3500</h6><hr>
+                        
+                        <a href="#" class="btn btn-danger">BOOK NOW FOR FREE</a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div><br>
+
+{{> footer}}
+
+
+
+
+    {{!-- js cnd link bootstrap --}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+    {{!-- aos animation cdn link --}}
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
